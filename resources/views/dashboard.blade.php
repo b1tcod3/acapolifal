@@ -18,6 +18,11 @@
                             <h4 class="text-lg font-semibold text-blue-800 mb-3">Docentes</h4>
                             <ul class="space-y-2">
                                 <li>
+                                    <a href="{{ route('docentes.listado') }}" class="text-blue-600 hover:text-blue-800 hover:underline">
+                                        Listado de Docentes
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="{{ route('docentes.registro') }}" class="text-blue-600 hover:text-blue-800 hover:underline">
                                         Registro de Docentes
                                     </a>
@@ -55,6 +60,11 @@
                             <h4 class="text-lg font-semibold text-green-800 mb-3">Estudiantes</h4>
                             <ul class="space-y-2">
                                 <li>
+                                    <a href="{{ route('estudiantes.listado') }}" class="text-green-600 hover:text-green-800 hover:underline">
+                                        Listado de Estudiantes
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="{{ route('estudiantes.registro') }}" class="text-green-600 hover:text-green-800 hover:underline">
                                         Registro de Estudiantes
                                     </a>
@@ -86,6 +96,11 @@
                         <div class="bg-purple-50 rounded-lg p-4 shadow">
                             <h4 class="text-lg font-semibold text-purple-800 mb-3">Instructores</h4>
                             <ul class="space-y-2">
+                                <li>
+                                    <a href="{{ route('instructores.listado') }}" class="text-purple-600 hover:text-purple-800 hover:underline">
+                                        Listado de Instructores
+                                    </a>
+                                </li>
                                 <li>
                                     <a href="{{ route('instructores.registro') }}" class="text-purple-600 hover:text-purple-800 hover:underline">
                                         Registro de Instructores

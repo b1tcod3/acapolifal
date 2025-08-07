@@ -28,12 +28,21 @@ class EstudiantesExport implements FromQuery, WithHeadings, WithMapping, WithSty
                 $q->where('nombres', 'like', '%' . $this->filtros['search'] . '%')
                     ->orWhere('apellidos', 'like', '%' . $this->filtros['search'] . '%')
                     ->orWhere('cedula', 'like', '%' . $this->filtros['search'] . '%')
-                    ->orWhere('email', 'like', '%' . $this->filtros['search'] . '%');
+                    ->orWhere('email', 'like', '%' . $this->filtros['search'] . '%')
+                    ->orWhere('codigo_estudiante', 'like', '%' . $this->filtros['search'] . '%');
             });
         }
 
         if (!empty($this->filtros['estado']) && $this->filtros['estado'] !== 'todos') {
             $query->where('estado', $this->filtros['estado']);
+        }
+
+        if (!empty($this->filtros['grado']) && $this->filtros['grado'] !== 'todos') {
+            $query->where('grado', $this->filtros['grado']);
+        }
+
+        if (!empty($this->filtros['seccion']) && $this->filtros['seccion'] !== 'todos') {
+            $query->where('seccion', $this->filtros['seccion']);
         }
 
         return $query->orderBy('apellidos')->orderBy('nombres');
@@ -50,12 +59,9 @@ class EstudiantesExport implements FromQuery, WithHeadings, WithMapping, WithSty
             'Teléfono',
             'Dirección',
             'Fecha de Nacimiento',
-            'Nombre del Padre',
-            'Teléfono del Padre',
-            'Email del Padre',
-            'Nombre de la Madre',
-            'Teléfono de la Madre',
-            'Email de la Madre',
+            'Código Estudiante',
+            'Grado',
+            'Sección',
             'Estado',
             'Fecha de Creación',
             'Fecha de Actualización',
@@ -73,12 +79,9 @@ class EstudiantesExport implements FromQuery, WithHeadings, WithMapping, WithSty
             $estudiante->telefono,
             $estudiante->direccion,
             $estudiante->fecha_nacimiento,
-            $estudiante->nombre_padre,
-            $estudiante->telefono_padre,
-            $estudiante->email_padre,
-            $estudiante->nombre_madre,
-            $estudiante->telefono_madre,
-            $estudiante->email_madre,
+            $estudiante->codigo_estudiante,
+            $estudiante->grado,
+            $estudiante->seccion,
             $estudiante->estado,
             $estudiante->created_at,
             $estudiante->updated_at,
@@ -109,14 +112,11 @@ class EstudiantesExport implements FromQuery, WithHeadings, WithMapping, WithSty
             'G' => ['width' => 30],
             'H' => ['width' => 20],
             'I' => ['width' => 20],
-            'J' => ['width' => 15],
-            'K' => ['width' => 25],
-            'L' => ['width' => 20],
-            'M' => ['width' => 15],
-            'N' => ['width' => 25],
-            'O' => ['width' => 15],
-            'P' => ['width' => 20],
-            'Q' => ['width' => 20],
+            'J' => ['width' => 10],
+            'K' => ['width' => 10],
+            'L' => ['width' => 15],
+            'M' => ['width' => 20],
+            'N' => ['width' => 20],
         ];
     }
 }

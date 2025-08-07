@@ -86,6 +86,14 @@
                             </div>
                             <ul class="space-y-2">
                                 <li>
+                                    <a href="{{ route('docentes.listado') }}" class="text-blue-600 hover:text-blue-800 hover:underline flex items-center">
+                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                        Listado de Docentes
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="{{ route('docentes.registro') }}" class="text-blue-600 hover:text-blue-800 hover:underline flex items-center">
                                         <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -148,6 +156,14 @@
                             </div>
                             <ul class="space-y-2">
                                 <li>
+                                    <a href="{{ route('estudiantes.listado') }}" class="text-green-600 hover:text-green-800 hover:underline flex items-center">
+                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                        Listado de Estudiantes
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="{{ route('estudiantes.registro') }}" class="text-green-600 hover:text-green-800 hover:underline flex items-center">
                                         <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -201,6 +217,14 @@
                                 <h4 class="text-lg font-semibold text-purple-800 ml-3">Instructores</h4>
                             </div>
                             <ul class="space-y-2">
+                                <li>
+                                    <a href="{{ route('instructores.listado') }}" class="text-purple-600 hover:text-purple-800 hover:underline flex items-center">
+                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                        Listado de Instructores
+                                    </a>
+                                </li>
                                 <li>
                                     <a href="{{ route('instructores.registro') }}" class="text-purple-600 hover:text-purple-800 hover:underline flex items-center">
                                         <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

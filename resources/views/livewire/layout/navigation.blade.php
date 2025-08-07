@@ -49,6 +49,7 @@ new class extends Component
                         
                         <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute z-50 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                             <div class="py-1">
+                                <a href="{{ route('docentes.listado') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Listado</a>
                                 <a href="{{ route('docentes.registro') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Registro</a>
                                 <a href="{{ route('docentes.gestion-horarios') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Gestión de Horarios</a>
                                 <a href="{{ route('docentes.control-ausencias') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Control de Ausencias</a>
@@ -70,6 +71,7 @@ new class extends Component
                         
                         <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute z-50 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                             <div class="py-1">
+                                <a href="{{ route('estudiantes.listado') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Listado</a>
                                 <a href="{{ route('estudiantes.registro') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Registro</a>
                                 <a href="{{ route('estudiantes.horarios') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Horarios</a>
                                 <a href="{{ route('estudiantes.asistencias') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Asistencias</a>
@@ -90,6 +92,7 @@ new class extends Component
                         
                         <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute z-50 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                             <div class="py-1">
+                                <a href="{{ route('instructores.listado') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Listado</a>
                                 <a href="{{ route('instructores.registro') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Registro</a>
                                 <a href="{{ route('instructores.matricula-asignada') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Matrícula Asignada</a>
                                 <a href="{{ route('instructores.informes') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Informes</a>
@@ -174,6 +177,9 @@ new class extends Component
             <div class="pl-4">
                 <div class="py-2 text-sm font-medium text-gray-500">Docentes</div>
                 <div class="pl-4 space-y-1">
+                    <x-responsive-nav-link :href="route('docentes.listado')" :active="request()->routeIs('docentes.listado')" wire:navigate>
+                        {{ __('Listado') }}
+                    </x-responsive-nav-link>
                     <x-responsive-nav-link :href="route('docentes.registro')" :active="request()->routeIs('docentes.registro')" wire:navigate>
                         {{ __('Registro') }}
                     </x-responsive-nav-link>
@@ -199,6 +205,9 @@ new class extends Component
             <div class="pl-4">
                 <div class="py-2 text-sm font-medium text-gray-500">Estudiantes</div>
                 <div class="pl-4 space-y-1">
+                    <x-responsive-nav-link :href="route('estudiantes.listado')" :active="request()->routeIs('estudiantes.listado')" wire:navigate>
+                        {{ __('Listado') }}
+                    </x-responsive-nav-link>
                     <x-responsive-nav-link :href="route('estudiantes.registro')" :active="request()->routeIs('estudiantes.registro')" wire:navigate>
                         {{ __('Registro') }}
                     </x-responsive-nav-link>
@@ -221,6 +230,9 @@ new class extends Component
             <div class="pl-4">
                 <div class="py-2 text-sm font-medium text-gray-500">Instructores</div>
                 <div class="pl-4 space-y-1">
+                    <x-responsive-nav-link :href="route('instructores.listado')" :active="request()->routeIs('instructores.listado')" wire:navigate>
+                        {{ __('Listado') }}
+                    </x-responsive-nav-link>
                     <x-responsive-nav-link :href="route('instructores.registro')" :active="request()->routeIs('instructores.registro')" wire:navigate>
                         {{ __('Registro') }}
                     </x-responsive-nav-link>

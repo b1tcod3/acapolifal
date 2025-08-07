@@ -14,6 +14,18 @@ Route::view('profile', 'profile')
 
 // Rutas para Docentes
 Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/docentes/listado', function () {
+        return view('docentes.listado');
+    })->name('docentes.listado');
+    
+    Route::get('/docentes/ver/{id}', function ($id) {
+        return view('docentes.ver', ['id' => $id]);
+    })->name('docentes.ver');
+    
+    Route::get('/docentes/editar/{id}', function ($id) {
+        return view('docentes.editar', ['id' => $id]);
+    })->name('docentes.editar');
+    
     Route::get('/docentes/registro', function () {
         return view('docentes.registro');
     })->name('docentes.registro');
@@ -41,6 +53,18 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 // Rutas para Estudiantes
 Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/estudiantes/listado', function () {
+        return view('estudiantes.listado');
+    })->name('estudiantes.listado');
+    
+    Route::get('/estudiantes/ver/{id}', function ($id) {
+        return view('estudiantes.ver', ['id' => $id]);
+    })->name('estudiantes.ver');
+    
+    Route::get('/estudiantes/editar/{id}', function ($id) {
+        return view('estudiantes.editar', ['id' => $id]);
+    })->name('estudiantes.editar');
+    
     Route::get('/estudiantes/registro', function () {
         return view('estudiantes.registro');
     })->name('estudiantes.registro');
@@ -64,6 +88,18 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 // Rutas para Instructores
 Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/instructores/listado', function () {
+        return view('instructores.listado');
+    })->name('instructores.listado');
+    
+    Route::get('/instructores/ver/{id}', function ($id) {
+        return view('instructores.ver', ['id' => $id]);
+    })->name('instructores.ver');
+    
+    Route::get('/instructores/editar/{id}', function ($id) {
+        return view('instructores.editar', ['id' => $id]);
+    })->name('instructores.editar');
+    
     Route::get('/instructores/registro', function () {
         return view('instructores.registro');
     })->name('instructores.registro');

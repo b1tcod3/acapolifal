@@ -49,9 +49,11 @@ class InstructoresExport implements FromQuery, WithHeadings, WithMapping, WithSt
             'Email',
             'Teléfono',
             'Dirección',
-            'Fecha de Nacimiento',
             'Especialidad',
+            'Nivel Educativo',
+            'Fecha de Contratación',
             'Estado',
+            'Observaciones',
             'Fecha de Creación',
             'Fecha de Actualización',
         ];
@@ -67,9 +69,11 @@ class InstructoresExport implements FromQuery, WithHeadings, WithMapping, WithSt
             $instructor->email,
             $instructor->telefono,
             $instructor->direccion,
-            $instructor->fecha_nacimiento,
             $instructor->especialidad,
+            $instructor->nivel_educativo,
+            $instructor->fecha_contratacion,
             $instructor->estado,
+            $instructor->observaciones,
             $instructor->created_at,
             $instructor->updated_at,
         ];
@@ -99,9 +103,11 @@ class InstructoresExport implements FromQuery, WithHeadings, WithMapping, WithSt
             'G' => ['width' => 30],
             'H' => ['width' => 20],
             'I' => ['width' => 20],
-            'J' => ['width' => 15],
-            'K' => ['width' => 20],
-            'L' => ['width' => 20],
+            'J' => ['width' => 20],
+            'K' => ['width' => 15],
+            'L' => ['width' => 30],
+            'M' => ['width' => 20],
+            'N' => ['width' => 20],
         ];
     }
 }
