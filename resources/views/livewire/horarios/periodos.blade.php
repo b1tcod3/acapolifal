@@ -27,7 +27,7 @@
                             :placeholder="__('Ej: 2024-2025, 1er Lapso 2024, etc.')"
                             required
                         />
-                        <x-input-error :messages="$errors->nombre('nombre')" class="mt-2" />
+                        <x-input-error :messages="$errors->get('nombre')" class="mt-2" />
                     </div>
 
                     <div>
@@ -45,7 +45,7 @@
                             <option value="Verano">{{ __('Verano') }}</option>
                             <option value="Intensivo">{{ __('Intensivo') }}</option>
                         </select>
-                        <x-input-error :messages="$errors->tipo('tipo')" class="mt-2" />
+                        <x-input-error :messages="$errors->get('tipo')" class="mt-2" />
                     </div>
 
                     <div>
@@ -57,7 +57,7 @@
                             type="date"
                             required
                         />
-                        <x-input-error :messages="$errors->fecha_inicio('fecha_inicio')" class="mt-2" />
+                        <x-input-error :messages="$errors->get('fecha_inicio')" class="mt-2" />
                     </div>
 
                     <div>
@@ -69,7 +69,7 @@
                             type="date"
                             required
                         />
-                        <x-input-error :messages="$errors->fecha_fin('fecha_fin')" class="mt-2" />
+                        <x-input-error :messages="$errors->get('fecha_fin')" class="mt-2" />
                     </div>
 
                     <div class="md:col-span-2">
@@ -81,7 +81,7 @@
                             rows="2"
                             :placeholder="__('Descripción opcional del período...')"
                         ></textarea>
-                        <x-input-error :messages="$errors->descripcion('descripcion')" class="mt-2" />
+                        <x-input-error :messages="$errors->get('descripcion')" class="mt-2" />
                     </div>
 
                     <div>
